@@ -17,14 +17,14 @@ MonoBehaviour:
     ufoLicenseKey: QVhIZm9iei8vLy8vQUFBQUtNbHJrb3BudlUrd2tNQUhOdUxSWlA5VVNnUE55OEhGM3pnUUxUaTFlNytkRzU3aWFEdWtJcElVdkxuQ0wrbU5VdHpSRzBMWTk2eGM0cUN1ZXZjZ3hGUCtOSU81c0ZPcnNUMDM1MUdKdUNiRVVFNGpVejNPbjMxS0g4NURaUm41OU5lbG51ZmFVbi94N1l2RytwT1YzM1lzTGVnQUlUb0xUcTRRdVVNNTVuUHZ0MGhybzJzYVh3OWFiaUh5VTdHUDhEd3E5ZUIrdW0wclZxd1B1dEZtV0t4Y21wRWZTQW9iZ29KNDFYTHNRaEZXeTZJOWl6V1ljTGxFR0dCTUJYRTdPUzJOK2pCRkhySVBGWkdGak5KczVCb3g0SFVIQ2JwQzVSOEZueTdOZ3pEeWJCb1c3WUt5K2kzSkhjenF4L2o0ZC82K3BxK2ppUWMwMTlFWFVBdVR4Q081aHBKSEdKdWZBTjlpQ2dkNUN4YWE=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 1
-    maxSimultaneousObjectTargets: 1
+    maxSimultaneousImageTargets: 2
+    maxSimultaneousObjectTargets: 2
     virtualSceneScaleFactor: 1
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
     shareRecordingsInITunes: 0
     version: 10.2.5
-    eulaAcceptedVersions: 
+    eulaAcceptedVersions: '{"Values":["10.2"]}'
   database:
     disableModelExtraction: 0
   shaders:
@@ -36,7 +36,7 @@ MonoBehaviour:
     videoBackgroundEnabled: 1
   deviceTracker:
     autoStartTracker: 1
-    arcoreRequirement: 1
+    arcoreRequirement: 2
     autoImportArcore: 1
   playmode:
     mSequencePath: 
@@ -44,4 +44,4 @@ MonoBehaviour:
   webcam:
     renderTextureLayer: 30
   packageInformation:
-    ARFoundationVersion: 
+    ARFoundationVersion: 4.1.7
