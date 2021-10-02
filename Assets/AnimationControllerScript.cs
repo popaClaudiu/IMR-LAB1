@@ -8,9 +8,9 @@ public class AnimationControllerScript : MonoBehaviour
     Animator anim2;
     public GameObject cactus1;
     public GameObject cactus2;
-    public GameObject imgTarget1;
-    public GameObject imgTarget2;
-    
+    GameObject imgTarget1;
+    GameObject imgTarget2;
+    int isCloseKey;
     public float treshHold = 0.3f;
     
     // Start is called before the first frame update
@@ -22,25 +22,26 @@ public class AnimationControllerScript : MonoBehaviour
         imgTarget1 = cactus1.transform.root.gameObject;
         imgTarget2 = cactus2.transform.root.gameObject;
 
-        Debug.Log(imgTarget1);
-        Debug.Log(imgTarget2);
+        isCloseKey = Animator.StringToHash("isClose");
     }
 
     // Update is called once per frame
     void Update()
     {
-
         float distance = Vector3.Distance(imgTarget1.transform.position, imgTarget2.transform.position);
+        bool isClose = anim1.GetBool(isCloseKey);
+        if(distance < treshHold && !isClose){
+            cactus1.transform.Rotate(0, -90, 0);
+            cactus2.transform.Rotate(0, 90, 0);
 
-        if(distance < treshHold){
-            anim1.SetBool("isClose", true);
-            anim2.SetBool("isClose", true);
-        }else{
-            anim1.SetBool("isClose", false);
-            anim2.SetBool("isClose", false);
+            anim1.SetBool(isCloseKey, true);
+            anim2.SetBool(isCloseKey, true);
+        }else if(distance >= treshHold && isClose){
+            cactus1.transform.Rotate(0, 90, 0);
+            cactus2.transform.Rotate(0, -90, 0);
+            
+            anim1.SetBool(isCloseKey, false);
+            anim2.SetBool(isCloseKey, false);
         }
-
-
-        
     }
 }
